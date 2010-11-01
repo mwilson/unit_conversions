@@ -1,0 +1,26 @@
+<h1>Unit Conversions</h1>
+
+<table class='tablesorter'>
+  <thead>
+  <tr>
+    <th>Units In</th>
+    <th>Units Out</th>
+    <th>Factor</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% for unit_conversion in @unit_conversions %>
+      <tr>
+        <td><%= unit_conversion.units_in %></td>
+        <td><%= unit_conversion.units_out %></td>
+        <td><%= unit_conversion.conversion_factor %></td>
+        <td><%= link_to 'Edit', edit_unit_conversion_path(unit_conversion) %></td>
+        <td><%= link_to 'Remove', unit_conversion, :method=>:delete, :confirm=>"Are you sure?" %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<p>
+  <%= link_to 'Create New Conversion', new_unit_conversion_path %>
+</p>

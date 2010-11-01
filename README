@@ -1,0 +1,31 @@
+Unit Conversions
+================
+
+This plugin installs a small table (unit_conversions), which will allow the user to easily and dynamically define unit conversions.
+
+I put my cucumber test under features, but don't know how to test them without the full rails framework available.
+
+To add/edit/delete records, visit http://<your app>/unit_conversions
+
+
+Installation
+============
+
+rails plugin install git://github.com/mwilson/unit_conversions.git
+
+rails g unit_conversions
+
+rake db:migrate
+
+
+Example
+=======
+
+Call this function:
+UnitConversion.convert_units(units_in, units_out, result)
+
+UnitConversion.convert_units('ppm', 'ppb', 456) = 456000
+
+
+
+Copyright (c) 2010 Matthew Wilson, released under the MIT license
